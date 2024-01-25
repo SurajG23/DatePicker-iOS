@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalendarMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZJM-Mp-aT6">
+                                <rect key="frame" x="10" y="458" width="373" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuZ-ca-Vh1">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DuZ-ca-Vh1" secondAttribute="height" id="3fr-Ov-8wF"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="imgPrevious"/>
+                                        <connections>
+                                            <action selector="btnPreviousTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBO-Si-XQD"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0E-Cq-V6u">
+                                        <rect key="frame" x="60" y="0.0" width="253" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sK7-3I-wkh">
+                                        <rect key="frame" x="323" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="sK7-3I-wkh" secondAttribute="height" id="1pN-iR-Ngv"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="imgNext"/>
+                                        <connections>
+                                            <action selector="btnNextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="68q-Ge-5ka"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sK7-3I-wkh" firstAttribute="height" secondItem="DuZ-ca-Vh1" secondAttribute="height" id="LUV-0a-fpo"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zn6-h9-NYm" customClass="CalendarMenu" customModule="CalendarMenuDemo" customModuleProvider="target">
+                                <rect key="frame" x="10" y="608" width="373" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zn6-h9-NYm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="200/393" id="5sg-rA-EF3"/>
+                            <constraint firstItem="zn6-h9-NYm" firstAttribute="top" secondItem="ZJM-Mp-aT6" secondAttribute="bottom" constant="100" id="FXT-Ld-4ML"/>
+                            <constraint firstItem="zn6-h9-NYm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="VrN-fC-FeL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZJM-Mp-aT6" secondAttribute="trailing" constant="10" id="j4i-fu-7Nb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zn6-h9-NYm" secondAttribute="trailing" constant="10" id="l9h-a6-TdG"/>
+                            <constraint firstItem="DuZ-ca-Vh1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="50/393" id="qto-9K-oGP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zn6-h9-NYm" secondAttribute="bottom" constant="10" id="ujy-sD-7dm"/>
+                            <constraint firstItem="ZJM-Mp-aT6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="wOX-ps-Sbi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarMenu" destination="zn6-h9-NYm" id="2Fi-cf-RRb"/>
+                        <outlet property="txtDate" destination="V0E-Cq-V6u" id="b4P-GM-zcI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imgNext" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="imgPrevious" width="170.66667175292969" height="170.66667175292969"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
